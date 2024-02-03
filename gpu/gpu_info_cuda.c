@@ -272,8 +272,8 @@ int get_device_vram(cuda_handle_t h, nvmlDevice_t device,nvmlDevice_t *migp,unsi
     }
   }
 
-  LOG(h.verbose, "[%d] CUDA totalMem %ld\n", deviceId, memInfo.total);
-  LOG(h.verbose, "[%d] CUDA freeMem %ld\n", deviceId, memInfo.free);
+  LOG(h.verbose, "[%d] CUDA totalMem %llu\n", deviceId, memInfo.total);
+  LOG(h.verbose, "[%d] CUDA freeMem %llu\n", deviceId, memInfo.free);
 
   resp->total += memInfo.total;
   resp->free += memInfo.free;
